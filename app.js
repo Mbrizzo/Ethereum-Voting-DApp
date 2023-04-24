@@ -12,3 +12,7 @@ const contractAbi = JSON.parse(process.env.CONTRACT_ABI);
 const contractAddress = process.env.CONTRACT_ADDRESS;
 const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
 
+// Atualiza os resultados na interface
+document.getElementById(`candidato${i}`).innerText = candidateName;
+document.getElementById(`votos${i}`).innerText = votes;
+     
