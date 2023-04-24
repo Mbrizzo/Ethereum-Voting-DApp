@@ -24,4 +24,8 @@ async function updateResults() {
     document.getElementById(`votos${i}`).innerText = votes;
     }
 }
-     
+
+// Atualizar os resultados quando a página for carregada
+window.addEventListener('load', () => {
+    updateResults();
+  });
