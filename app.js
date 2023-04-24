@@ -13,6 +13,15 @@ const contractAddress = process.env.CONTRACT_ADDRESS;
 const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
 
 // Atualiza os resultados na interface
-document.getElementById(`candidato${i}`).innerText = candidateName;
-document.getElementById(`votos${i}`).innerText = votes;
+async function updateResults() {
+    const candidateCount = await contractInstance.methods.getCandidateCount().call();
+
+    for (let i = 1; i <= candidateCount; i++) {
+        const candidateName = await contractInstance.methods.getCandidateName(i).call();
+        const votes = await contractInstance.methods.getVotesForCandidate(i).call();    
+    
+    document.getElementById(`candidato${i}`).innerText = candidateName;
+    document.getElementById(`votos${i}`).innerText = votes;
+    }
+}
      
