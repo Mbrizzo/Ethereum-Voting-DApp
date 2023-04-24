@@ -24,6 +24,12 @@ async function updateResults() {
     document.getElementById(`votos${i}`).innerText = votes;
     }
 }
+// Função para votar em um candidato
+async function vote(candidateId) {
+    await contractInstance.methods.voteForCandidate(candidateId).send({from: web3.eth.accounts.givenProvider.selectedAddress});
+    updateResults()
+}
+
 
 // Atualizar os resultados quando a página for carregada
 window.addEventListener('load', () => {
