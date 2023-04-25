@@ -19,6 +19,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					}
+				],
+				"name": "adicionarCandidato",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -114,11 +127,11 @@
 	},
 	"sources": {
 		"votacao.sol": {
-			"keccak256": "0x885aa006243f40a93d259b99f185e3be7fd80b1dae45af94ce6a3b4add8c0cd8",
+			"keccak256": "0xd280af536bbe37822df646bd6eec07b2d97970bbbc1a3975654bfd5dac604e4e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://28503b07f43e845f5769fed7f46f7731c7e2a9634030045539607903246878ab",
-				"dweb:/ipfs/Qmd69vdP7hZvNi2Q3EBmuw1PrNTiQQfUkUvWfdksvaqHoP"
+				"bzz-raw://81b6bf15dfb3afbb05fc3c1f4d3bca4842449a8a7c9f12056c2aad67d2b7ce2d",
+				"dweb:/ipfs/QmVYmXA6jNr7quL6LRk8nexURh6FPc6jwphhxV7KaG2hfW"
 			]
 		}
 	},

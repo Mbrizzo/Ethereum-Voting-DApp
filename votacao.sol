@@ -9,7 +9,12 @@ contract Votacao {
         uint256 votos;
     }
 // Mapeamento dos candidatos
-    mapping(uint256 => Candidato) public candidatos;
+mapping(uint256 => Candidato) public candidatos;
+
+function adicionarCandidato(string memory nome) public {
+    totalCandidatos++;
+    candidatos[totalCandidatos] = Candidato(nome, 0);
+}
 
     // Total de candidatos
     uint256 public totalCandidatos;
