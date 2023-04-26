@@ -1,4 +1,5 @@
 require('dotenv').config();
+import abi from './abi';
 
 // Conecta ao blockchain usando Web3
 const Web3 = require('web3');
@@ -9,7 +10,7 @@ const web3 = new Web3('http://localhost:7545');
 // Se for usar em outra rede, consulte o endereço correto.
 
 // Importação do contrato
-const contractAbi = JSON.parse(process.env.CONTRACT_ABI);
+const contractAbi = abi;
 const contractAddress = process.env.CONTRACT_ADDRESS;
 const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
 
